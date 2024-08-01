@@ -8,7 +8,7 @@ Following are the four different types of languages or commands which are widely
 4. TCL (Transaction Control Language)
 
 
-### DDL (Data Definition Language) 
+# DDL (Data Definition Language) 
 DDL (Data Definition Language) is a subset of SQL (Structured Query Language) used to define, alter, and manage database objects such as tables, indexes, and schemas. DDL statements are crucial for setting up and modifying the structure of a database.
 
 #### Common DDL Statements
@@ -26,3 +26,34 @@ Constraints are rules enforced on data columns to ensure data integrity. Common 
 - NOT NULL: Ensures a column cannot have a NULL value.
 - CHECK: Ensures all values in a column satisfy a specific condition.
 
+# DML (Data Manipulation Language)
+DML (Data Manipulation Language) is a subset of SQL (Structured Query Language) used to manage and manipulate data within database objects like tables. DML statements are essential for performing operations such as inserting, updating, deleting, and retrieving data.
+
+#### Common DML Statements
+- INSERT: Adds new records to a table.
+- UPDATE: Modifies existing records in a table.
+- DELETE: Removes existing records from a table.
+- SELECT: Retrieves data from one or more tables.
+
+#### Additional DML Concepts
+Transactions: DML operations can be grouped into transactions to ensure data integrity and consistency. A transaction is a sequence of one or more SQL statements that are executed as a single unit.
+
+##### Transaction Control Statements:
+
+- BEGIN TRANSACTION or START TRANSACTION: Begins a new transaction.
+- COMMIT: Saves the changes made by the transaction.
+- ROLLBACK: Reverts the changes made by the transaction.
+
+# Data Control Language (DCL)
+Data Control Language (DCL) is used to control access to data in the database. The two main DCL statements are:
+
+- GRANT: Gives a user permission to perform certain actions on database objects.
+- REVOKE: Removes a user’s permission to perform certain actions on database objects.
+
+# Transaction Control Language (TCL)
+Transaction Control Language (TCL) manages the changes made by DML statements and allows you to group DML statements into transactions.
+
+- COMMIT: Saves all the transactions to the database.
+- ROLLBACK: Undoes the transactions that have not been saved to the database.
+- SAVEPOINT: Sets a point within a transaction to which you can roll back later.
+- SET TRANSACTION: Sets the characteristics of the transaction.
