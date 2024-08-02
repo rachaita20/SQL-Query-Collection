@@ -114,5 +114,65 @@ Transaction Control Language (TCL) manages the changes made by DML statements an
 #### 5. JSON:
 - JSON: Stores JSON (JavaScript Object Notation) data.
 
+# Constraints in SQL
+Constraints in SQL are rules enforced on data columns in a table to ensure data integrity and accuracy. Constraints define how data should be stored in the database, and they can be applied at the column level or the table level. Here are the primary types of constraints in SQL:
+## Types of Constraints
+1. NOT NULL: Ensures that a column cannot have a NULL value.
+2. UNIQUE: Ensures that all values in a column or a set of columns are unique across the rows in the table.
+3. PRIMARY KEY: A combination of NOT NULL and UNIQUE. It uniquely identifies each row in a table.
+4. FOREIGN KEY: Ensures referential integrity by linking two tables. The foreign key in the child table references the primary key in the parent table.
+5. CHECK: Ensures that all values in a column satisfy a specific condition.
+6. DEFAULT: Sets a default value for a column when no value is specified.
+7. INDEX: Improves the speed of data retrieval operations on a table at the cost of additional storage and slower write operations.
+
+# Operators in SQL
+SQL operators are used to perform operations on data and help in formulating queries. They can be broadly categorized into several types based on their functionality. Here's a overview of the different types of operators in SQL:
+#### 1. Arithmetic Operators: Perform mathematical operations.
+- Addition (+): SELECT 10 + 5;
+- Subtraction (-): SELECT 15 - 5;
+- Multiplication (*): SELECT 4 * 3;
+- Division (/): SELECT 20 / 4;
+- Modulus (%): SELECT 17 % 4;
+
+#### 2. Comparison Operators: Compare values to return boolean results.
+- Equal to (=): SELECT * FROM Employees WHERE Salary = 60000;
+- Not equal to (<>): SELECT * FROM Employees WHERE Salary <> 60000;
+- Greater than (>): SELECT * FROM Employees WHERE Salary > 60000;
+- Less than (<): SELECT * FROM Employees WHERE Salary < 60000;
+- Greater than or equal to (>=): SELECT * FROM Employees WHERE Salary >= 60000;
+- Less than or equal to (<=): SELECT * FROM Employees WHERE Salary <= 60000;
+
+#### 3. Logical Operators: Combine conditions.
+- AND: SELECT * FROM Employees WHERE Salary > 50000 AND Department = 'IT';
+- OR: SELECT * FROM Employees WHERE Salary > 50000 OR Department = 'HR';
+- NOT: SELECT * FROM Employees WHERE NOT Department = 'IT';
+
+#### 4. String Operators: Manipulate string data.
+- LIKE: SELECT * FROM Employees WHERE LastName LIKE 'S%';
+- CONCAT: SELECT CONCAT(FirstName, ' ', LastName) AS FullName FROM Employees;
+- SUBSTRING: SELECT SUBSTRING(FullName FROM 1 FOR 5) AS ShortName FROM Employees;
+
+#### 5. Set Operators: Combine results from multiple queries.
+- UNION: SELECT FirstName FROM Employees UNION SELECT FirstName FROM Managers;
+- UNION ALL: SELECT FirstName FROM Employees UNION ALL SELECT FirstName FROM Managers;
+- INTERSECT: SELECT FirstName FROM Employees INTERSECT SELECT FirstName FROM Managers;
+- EXCEPT: SELECT FirstName FROM Employees EXCEPT SELECT FirstName FROM Managers;
+
+#### 6. Null Operators: Handle NULL values.
+- IS NULL: SELECT * FROM Employees WHERE MiddleName IS NULL;
+- IS NOT NULL: SELECT * FROM Employees WHERE MiddleName IS NOT NULL;
+
+#### 7. Conditional Operators: Provide conditional logic.
+- CASE: SELECT FirstName, CASE WHEN Salary > 70000 THEN 'High' ELSE 'Low' END AS SalaryCategory FROM Employees;
+- COALESCE: SELECT FirstName, COALESCE(MiddleName, 'N/A') FROM Employees;
+- NULLIF: SELECT NULLIF(Salary, 50000) FROM Employees;
+
+#### 8. Aggregate Functions: Calculate summary values from data sets.
+- COUNT: SELECT COUNT(*) FROM Employees;
+- SUM: SELECT SUM(Salary) FROM Employees;
+- AVG: SELECT AVG(Salary) FROM Employees;
+- MIN: SELECT MIN(Salary) FROM Employees;
+- MAX: SELECT MAX(Salary) FROM Employees;
+
 
 
